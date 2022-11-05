@@ -1,14 +1,41 @@
+:root {
+  /* Colors */
+  --c-black: #05091e;
+  --c-blue: #46b4ff;
+  --c-twbrand: dodgerblue;
+  --c-twbrand-2: darkmagenta;
+  --c-twbrand-3: #ff1493;
+  --c-gray: #90aab7;
+  --c-green: #9ef2cb;
+  --c-pink: #ffb8d9;
+  --c-orange: #ffb7a3;
+  --c-yellow: #ffdace;
+  --c-white: #fff;
+  --s-linkedin: #0A66C2;
+  --s-github: #000;
+  --s-ghost: #15171A;
+  --s-obsidian: #7a3c94;
+  --c-gmail: #EA4335;
+
+
+  --t-fg: var(--c-black);
+  --t-bg: var(--c-white);
+  --t-subdue: var(--c-gray);
+  --t-active: var(--c-blue);
+}
+
+
 /* gradient heading */
 .main-heading {
   display: inline-block;
-  margin: 2rem 0;
+  margin: 2rem 0 2.5rem;
   font-style: normal;
   font-weight: 600;
   background: linear-gradient(
     89.81deg,
-    #9845e8 -1.72%,
-    #33d2ff 54.05%,
-    #dd5789 99.78%
+    #33d2ff -1.72%,
+    #ff1493 54.05%,
+    #910496 99.78%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -16,7 +43,46 @@
   text-fill-color: transparent;
   background-size: 150% 150%;
   animation: gradient 15s ease infinite;
-  line-height: 1.2;
+  line-height: 1.4;
+}
+
+.socials {
+  display: flex;
+  gap: 0.75em;
+  margin-left: auto;
+}
+
+.social {
+  display: block;
+}
+
+.socialIcon {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: var(--t-subdue);
+  transition: fill linear 150ms;
+}
+
+.socialIcon.github:hover {
+  fill: var(--s-github);
+}
+
+.socialIcon.linkedin:hover {
+  fill: var(--s-linkedin);
+}
+
+.socialIcon.ghost:hover {
+  fill: var(--s-ghost);
+}
+
+
+.socialIcon.notes:hover {
+  fill: var(--s-obsidian);
+}
+
+.socialIcon.email:hover {
+  fill: var(--c-gmail);
 }
 
 @keyframes gradient {
